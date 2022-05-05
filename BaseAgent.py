@@ -120,7 +120,7 @@ class Agent(base_agent.BaseAgent):
   
   def build_supply_depot(self, obs):
     scvs = self.get_my_units_by_type(obs, units.Terran.SCV)
-    if (obs.observation.player.minerals >= 100 and len(scvs) > 0 and self.free_supply < 5):
+    if (obs.observation.player.minerals >= 100 and len(scvs) > 0 and (obs.observation.player.food_cap - obs.observation.player.food_used) < 5):
       cc = random.choice(self.command_centers)
       supply_depot_xy = self.point_near_building_to_enemy(2, cc)
       distances = self.get_distances(obs, scvs, supply_depot_xy)

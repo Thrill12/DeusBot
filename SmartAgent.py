@@ -102,6 +102,7 @@ class SmartAgent(Agent):
             len(enemy_marauders),
             len(enemy_reapers),
             len(enemy_ghosts)
+            
             )
 
   # Gets the current state of the game, feeds the state into the QLearningTable and the QLearningTable chooses an action

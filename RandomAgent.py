@@ -7,4 +7,5 @@ class RandomAgent(Agent):
     super(RandomAgent, self).step(obs)
     action = random.choice(self.actions)
     print("yes this is so different oh wow")
+    print("wow new line")
     return getattr(self, action)(obs)
